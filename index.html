@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse Super Discount El Sereno's full product catalog — beverages, snacks, school supplies, party supplies, household goods, and more. Pick up in store at 3118 N Eastern Ave.">
+    <meta name="theme-color" content="#D72B2B">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta property="og:title" content="Shop | Super Discount El Sereno">
+    <meta property="og:description" content="Browse our full product catalog — beverages, snacks, school supplies, party supplies, and household goods. Open daily 9:30 AM–9 PM.">
+    <meta property="og:type" content="website">
+    <title>Shop | Super Discount El Sereno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="logo" href="https://epicsereno.github.io/superdiscount/" aria-label="Super Discount home">
+                <span>Super</span>
+                <strong>Discount</strong>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="https://epicsereno.github.io/superdiscount/#services">Services</a></li>
+                <li><a href="https://epicsereno.github.io/superdiscount/#about">About</a></li>
+                <li><a href="https://epicsereno.github.io/superdiscount/#location">Find Us</a></li>
+                <li><a href="index.html" aria-current="page">Shop</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link" aria-label="View cart">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 0 1-8 0"/>
+                        </svg>
+                        <span class="cart-count" id="cart-count" hidden>0</span>
+                    </a>
+                </li>
+                <li id="nav-signout" hidden>
+                    <button class="nav-signout-btn" onclick="Auth.logout()">Sign Out</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="shop-hero">
+            <div class="container">
+                <p class="eyebrow">Browse &amp; Order Online</p>
+                <h1 class="shop-title">Shop</h1>
+                <p class="shop-subtitle">Everything in the store. Add items to your cart, then call or stop by to pick up at 3118 N Eastern Ave — open daily 9:30 AM–9 PM.</p>
+            </div>
+        </section>
+
+        <section class="shop-filters-section" aria-label="Filter products">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-pills" id="filter-pills" role="group" aria-label="Filter by category"></div>
+                    <div>
+                        <label class="sr-only" for="product-search">Search products</label>
+                        <input class="search-input" type="search" id="product-search" placeholder="Search products...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-grid-section">
+            <div class="container">
+                <div class="product-grid" id="product-grid" aria-live="polite" aria-label="Product catalog"></div>
+                <p class="no-results" id="no-results" hidden>No products match your search.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p><strong>Super Discount</strong><br>3118 N Eastern Ave, Los Angeles, CA 90032</p>
+            <p><strong>Hours</strong><br>9:30 AM–9 PM daily</p>
+            <p><a href="tel:+13232238115">(323) 223-8115</a></p>
+            <p>&copy; 2026 Super Discount El Sereno.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>Auth.requireAuth();</script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

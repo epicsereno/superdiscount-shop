@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details at Super Discount El Sereno — add to cart and pick up in store at 3118 N Eastern Ave, Los Angeles.">
+    <meta name="theme-color" content="#D72B2B">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta property="og:title" content="Product | Super Discount El Sereno">
+    <meta property="og:type" content="product">
+    <title>Product | Super Discount El Sereno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="logo" href="https://epicsereno.github.io/superdiscount/" aria-label="Super Discount home">
+                <span>Super</span>
+                <strong>Discount</strong>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="https://epicsereno.github.io/superdiscount/#services">Services</a></li>
+                <li><a href="https://epicsereno.github.io/superdiscount/#about">About</a></li>
+                <li><a href="https://epicsereno.github.io/superdiscount/#location">Find Us</a></li>
+                <li><a href="index.html">Shop</a></li>
+                <li>
+                    <a href="cart.html" class="cart-link" aria-label="View cart">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 0 1-8 0"/>
+                        </svg>
+                        <span class="cart-count" id="cart-count" hidden>0</span>
+                    </a>
+                </li>
+                <li id="nav-signout" hidden>
+                    <button class="nav-signout-btn" onclick="Auth.logout()">Sign Out</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <nav class="pdp-breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <a href="index.html">Shop</a>
+                <span aria-hidden="true">/</span>
+                <a id="crumb-category" href="index.html">Products</a>
+                <span aria-hidden="true">/</span>
+                <span id="crumb-name" aria-current="page">Product</span>
+            </div>
+        </nav>
+
+        <section class="pdp-section">
+            <div class="container" id="pdp-root" aria-live="polite">
+                <p class="pdp-loading">Loading product…</p>
+            </div>
+        </section>
+
+        <section class="reviews-section" id="reviews-section" hidden>
+            <div class="container" id="reviews-root"></div>
+        </section>
+
+        <section class="related-section" id="related-section" hidden>
+            <div class="container">
+                <h2 class="related-heading">You might also like</h2>
+                <div class="product-grid" id="related-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-layout">
+            <p><strong>Super Discount</strong><br>3118 N Eastern Ave, Los Angeles, CA 90032</p>
+            <p><strong>Hours</strong><br>9:30 AM–9 PM daily</p>
+            <p><a href="tel:+13232238115">(323) 223-8115</a></p>
+            <p>&copy; 2026 Super Discount El Sereno.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>Auth.requireAuth();</script>
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

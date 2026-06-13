@@ -1,0 +1,19 @@
+{
+  "reviews": {
+    "1": [
+      { "name": "Marisol G.", "rating": 5, "date": "2026-04-18", "text": "Cheapest 2-liter in the neighborhood and always cold. I stop in every weekend." },
+      { "name": "Danny R.", "rating": 4, "date": "2026-03-02", "text": "Good price. Wish they stocked the mini cans too but the 2L is a great deal." }
+    ],
+    "3": [
+      { "name": "Coach Will", "rating": 5, "date": "2026-05-09", "text": "Grab a case of these for the team every Saturday. Best price around and they have all the flavors." }
+    ],
+    "5": [
+      { "name": "Jasmine T.", "rating": 5, "date": "2026-05-21", "text": "99 cents?! Can't beat it. The honey green tea is my go-to after work." },
+      { "name": "Pete", "rating": 5, "date": "2026-02-11", "text": "Always in stock, always cheap. Exactly what a corner store should be." },
+      { "name": "Lucia M.", "rating": 4, "date": "2026-01-28", "text": "Love it. Sometimes the flavor I want is sold out but they restock fast." }
+    ],
+    "6": [
+      { "name": "Eddie V.", "rating": 5, "date": "2026-04-30", "text": "Real Jarritos, mandarin and tamarindo. Tastes like home. Great little spot." }
+    ]
+  }
+}

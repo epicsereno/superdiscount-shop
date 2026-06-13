@@ -1,0 +1,445 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Coca-Cola 2L",
+      "category": "Beverages",
+      "price": 2.49,
+      "description": "Classic Coca-Cola, 2-liter bottle.",
+      "image": "public/images/products/1-coca-cola-2l.svg"
+    },
+    {
+      "id": 2,
+      "name": "Pepsi 2L",
+      "category": "Beverages",
+      "price": 2.49,
+      "description": "Refreshing Pepsi, 2-liter bottle.",
+      "image": "public/images/products/2-pepsi-2l.svg"
+    },
+    {
+      "id": 3,
+      "name": "Gatorade 32oz",
+      "category": "Beverages",
+      "price": 1.99,
+      "description": "Electrolyte sports drink, assorted flavors.",
+      "image": "public/images/products/3-gatorade-32oz.svg"
+    },
+    {
+      "id": 4,
+      "name": "Water 16.9oz 6-pack",
+      "category": "Beverages",
+      "price": 2.99,
+      "description": "Purified bottled water, 6-pack.",
+      "image": "public/images/products/4-water-16-9oz-6-pack.svg"
+    },
+    {
+      "id": 5,
+      "name": "Arizona Iced Tea 23oz",
+      "category": "Beverages",
+      "price": 0.99,
+      "description": "Arizona Green Tea with Honey, 23oz.",
+      "image": "public/images/products/5-arizona-iced-tea-23oz.svg"
+    },
+    {
+      "id": 6,
+      "name": "Jarritos 12oz",
+      "category": "Beverages",
+      "price": 1.49,
+      "description": "Mexican soda, assorted flavors.",
+      "image": "public/images/products/6-jarritos-12oz.svg"
+    },
+    {
+      "id": 7,
+      "name": "Horchata 32oz",
+      "category": "Beverages",
+      "price": 2.99,
+      "description": "Classic rice horchata, 32oz.",
+      "image": "public/images/products/7-horchata-32oz.svg"
+    },
+    {
+      "id": 8,
+      "name": "Orange Juice 64oz",
+      "category": "Beverages",
+      "price": 4.99,
+      "description": "100% pure orange juice, 64oz.",
+      "image": "public/images/products/8-orange-juice-64oz.svg"
+    },
+    {
+      "id": 9,
+      "name": "Takis Fuego 4oz",
+      "category": "Snacks & Candy",
+      "price": 2.49,
+      "description": "Spicy rolled tortilla chips.",
+      "image": "public/images/products/9-takis-fuego-4oz.svg"
+    },
+    {
+      "id": 10,
+      "name": "Flamin' Hot Cheetos 3.25oz",
+      "category": "Snacks & Candy",
+      "price": 1.99,
+      "description": "Crunchy flamin' hot cheese snacks.",
+      "image": "public/images/products/10-flamin-hot-cheetos-3-25oz.svg"
+    },
+    {
+      "id": 11,
+      "name": "Lays Classic 7.75oz",
+      "category": "Snacks & Candy",
+      "price": 3.49,
+      "description": "Classic potato chips, family size.",
+      "image": "public/images/products/11-lays-classic-7-75oz.svg"
+    },
+    {
+      "id": 12,
+      "name": "Skittles 2.17oz",
+      "category": "Snacks & Candy",
+      "price": 1.25,
+      "description": "Fruit-flavored candy, original mix.",
+      "image": "public/images/products/12-skittles-2-17oz.svg"
+    },
+    {
+      "id": 13,
+      "name": "Snickers Bar",
+      "category": "Snacks & Candy",
+      "price": 1.49,
+      "description": "Chocolate, caramel, peanut nougat.",
+      "image": "public/images/products/13-snickers-bar.svg"
+    },
+    {
+      "id": 14,
+      "name": "Ramen Noodles",
+      "category": "Snacks & Candy",
+      "price": 0.49,
+      "description": "Instant ramen, assorted flavors.",
+      "image": "public/images/products/14-ramen-noodles.svg"
+    },
+    {
+      "id": 15,
+      "name": "Beef Jerky 3oz",
+      "category": "Snacks & Candy",
+      "price": 4.99,
+      "description": "Original flavor beef jerky, 3oz.",
+      "image": "public/images/products/15-beef-jerky-3oz.svg"
+    },
+    {
+      "id": 16,
+      "name": "Oreos Family Size",
+      "category": "Snacks & Candy",
+      "price": 4.49,
+      "description": "Classic cream-filled sandwich cookies.",
+      "image": "public/images/products/16-oreos-family-size.svg"
+    },
+    {
+      "id": 17,
+      "name": "Spiral Notebook 70-pg",
+      "category": "School Supplies",
+      "price": 1.49,
+      "description": "College-ruled, 70 pages, single subject.",
+      "image": "public/images/products/17-spiral-notebook-70-pg.svg"
+    },
+    {
+      "id": 18,
+      "name": "5-Subject Notebook",
+      "category": "School Supplies",
+      "price": 4.99,
+      "description": "College-ruled, 200 pages, 5 tabbed subjects.",
+      "image": "public/images/products/18-5-subject-notebook.svg"
+    },
+    {
+      "id": 19,
+      "name": "Ballpoint Pens 10-pack",
+      "category": "School Supplies",
+      "price": 2.49,
+      "description": "Blue ink, medium tip, 10-pack.",
+      "image": "public/images/products/19-ballpoint-pens-10-pack.svg"
+    },
+    {
+      "id": 20,
+      "name": "#2 Pencils 12-pack",
+      "category": "School Supplies",
+      "price": 1.99,
+      "description": "Pre-sharpened, with erasers, 12-pack.",
+      "image": "public/images/products/20-2-pencils-12-pack.svg"
+    },
+    {
+      "id": 21,
+      "name": "Composition Notebook",
+      "category": "School Supplies",
+      "price": 2.49,
+      "description": "Wide-ruled, 100 pages, black marble.",
+      "image": "public/images/products/21-composition-notebook.svg"
+    },
+    {
+      "id": 22,
+      "name": "Markers 8-pack",
+      "category": "School Supplies",
+      "price": 3.49,
+      "description": "Washable broad-tip markers, assorted colors.",
+      "image": "public/images/products/22-markers-8-pack.svg"
+    },
+    {
+      "id": 23,
+      "name": "Glue Stick",
+      "category": "School Supplies",
+      "price": 0.99,
+      "description": "Washable glue stick, 0.26oz.",
+      "image": "public/images/products/23-glue-stick.svg"
+    },
+    {
+      "id": 24,
+      "name": "Scissors",
+      "category": "School Supplies",
+      "price": 2.99,
+      "description": "Sharp 7\" all-purpose scissors.",
+      "image": "public/images/products/24-scissors.svg"
+    },
+    {
+      "id": 25,
+      "name": "Balloons 25ct",
+      "category": "Party Supplies",
+      "price": 3.99,
+      "description": "11-inch latex balloons, assorted colors.",
+      "image": "public/images/products/25-balloons-25ct.svg"
+    },
+    {
+      "id": 26,
+      "name": "Party Plates 20ct",
+      "category": "Party Supplies",
+      "price": 4.49,
+      "description": "Heavy-duty disposable plates, 9 inch.",
+      "image": "public/images/products/26-party-plates-20ct.svg"
+    },
+    {
+      "id": 27,
+      "name": "Solo Cups 50ct",
+      "category": "Party Supplies",
+      "price": 5.99,
+      "description": "16oz red plastic cups, 50-pack.",
+      "image": "public/images/products/27-solo-cups-50ct.svg"
+    },
+    {
+      "id": 28,
+      "name": "Birthday Candles 24ct",
+      "category": "Party Supplies",
+      "price": 1.99,
+      "description": "Assorted color candles, 24-pack.",
+      "image": "public/images/products/28-birthday-candles-24ct.svg"
+    },
+    {
+      "id": 29,
+      "name": "Streamers Roll",
+      "category": "Party Supplies",
+      "price": 1.49,
+      "description": "Crepe paper streamer, 81 feet.",
+      "image": "public/images/products/29-streamers-roll.svg"
+    },
+    {
+      "id": 30,
+      "name": "Favor Bags 12ct",
+      "category": "Party Supplies",
+      "price": 2.99,
+      "description": "Assorted gift bags for parties, 12-pack.",
+      "image": "public/images/products/30-favor-bags-12ct.svg"
+    },
+    {
+      "id": 31,
+      "name": "Disposable Tablecloth",
+      "category": "Party Supplies",
+      "price": 3.49,
+      "description": "Plastic tablecloth, 54\" x 108\".",
+      "image": "public/images/products/31-disposable-tablecloth.svg"
+    },
+    {
+      "id": 32,
+      "name": "Table Rental (per day)",
+      "category": "Party Supplies",
+      "price": 10,
+      "description": "Folding table rental. Call ahead to reserve.",
+      "badge": "Rental",
+      "image": "public/images/products/32-table-rental-per-day.svg"
+    },
+    {
+      "id": 33,
+      "name": "Paper Towels 3-roll",
+      "category": "Household Goods",
+      "price": 3.99,
+      "description": "2-ply paper towels, 3-roll pack.",
+      "image": "public/images/products/33-paper-towels-3-roll.svg"
+    },
+    {
+      "id": 34,
+      "name": "Dish Soap 16oz",
+      "category": "Household Goods",
+      "price": 2.49,
+      "description": "Grease-cutting dish soap, original scent.",
+      "image": "public/images/products/34-dish-soap-16oz.svg"
+    },
+    {
+      "id": 35,
+      "name": "Sponge 3-pack",
+      "category": "Household Goods",
+      "price": 2.99,
+      "description": "Scrubbing sponges, 3-pack.",
+      "image": "public/images/products/35-sponge-3-pack.svg"
+    },
+    {
+      "id": 36,
+      "name": "Trash Bags 20ct",
+      "category": "Household Goods",
+      "price": 4.49,
+      "description": "13-gallon kitchen trash bags, 20-count.",
+      "image": "public/images/products/36-trash-bags-20ct.svg"
+    },
+    {
+      "id": 37,
+      "name": "AA Batteries 8-pack",
+      "category": "Household Goods",
+      "price": 5.99,
+      "description": "Long-lasting AA alkaline batteries.",
+      "image": "public/images/products/37-aa-batteries-8-pack.svg"
+    },
+    {
+      "id": 38,
+      "name": "Laundry Detergent 32oz",
+      "category": "Household Goods",
+      "price": 5.49,
+      "description": "Fresh-scent liquid detergent, 32oz.",
+      "image": "public/images/products/38-laundry-detergent-32oz.svg"
+    },
+    {
+      "id": 39,
+      "name": "Aluminum Foil Roll",
+      "category": "Household Goods",
+      "price": 3.49,
+      "description": "Heavy-duty aluminum foil, 50 sq ft.",
+      "image": "public/images/products/39-aluminum-foil-roll.svg"
+    },
+    {
+      "id": 40,
+      "name": "Soap Bar 3-pack",
+      "category": "Personal Care",
+      "price": 3.49,
+      "description": "Moisturizing bar soap, clean scent, 3-pack.",
+      "image": "public/images/products/40-soap-bar-3-pack.svg"
+    },
+    {
+      "id": 41,
+      "name": "Shampoo 12oz",
+      "category": "Personal Care",
+      "price": 3.99,
+      "description": "2-in-1 shampoo and conditioner, 12oz.",
+      "image": "public/images/products/41-shampoo-12oz.svg"
+    },
+    {
+      "id": 42,
+      "name": "Toothbrush 3-pack",
+      "category": "Personal Care",
+      "price": 2.99,
+      "description": "Soft bristle toothbrushes, 3-pack.",
+      "image": "public/images/products/42-toothbrush-3-pack.svg"
+    },
+    {
+      "id": 43,
+      "name": "Toothpaste 4oz",
+      "category": "Personal Care",
+      "price": 2.49,
+      "description": "Fluoride toothpaste, mint flavor, 4oz.",
+      "image": "public/images/products/43-toothpaste-4oz.svg"
+    },
+    {
+      "id": 44,
+      "name": "Deodorant",
+      "category": "Personal Care",
+      "price": 3.99,
+      "description": "Antiperspirant deodorant, fresh scent.",
+      "image": "public/images/products/44-deodorant.svg"
+    },
+    {
+      "id": 45,
+      "name": "Hand Sanitizer 8oz",
+      "category": "Personal Care",
+      "price": 2.99,
+      "description": "70% alcohol hand sanitizer, aloe formula.",
+      "image": "public/images/products/45-hand-sanitizer-8oz.svg"
+    },
+    {
+      "id": 46,
+      "name": "Ironlak Spray Paint 400ml",
+      "category": "Spray Paint & Art",
+      "price": 6.99,
+      "description": "Ironlak low-pressure acrylic spray paint, 400ml. Assorted colors.",
+      "image": "public/images/products/46-ironlak-spray-paint-400ml.svg"
+    },
+    {
+      "id": 47,
+      "name": "Montana Black 400ml",
+      "category": "Spray Paint & Art",
+      "price": 8.99,
+      "description": "Montana BLACK high-pressure spray paint, 400ml. Fast-drying, opaque.",
+      "image": "public/images/products/47-montana-black-400ml.svg"
+    },
+    {
+      "id": 48,
+      "name": "Montana Gold 400ml",
+      "category": "Spray Paint & Art",
+      "price": 8.49,
+      "description": "Montana GOLD low-pressure spray paint, 400ml. Matte finish, wide color range.",
+      "image": "public/images/products/48-montana-gold-400ml.svg"
+    },
+    {
+      "id": 49,
+      "name": "Spray Paint 6-Pack",
+      "category": "Spray Paint & Art",
+      "price": 39.99,
+      "description": "Mixed 6-pack of 400ml cans. Pick your colors at the counter.",
+      "image": "public/images/products/49-spray-paint-6-pack.svg"
+    },
+    {
+      "id": 50,
+      "name": "Fat Caps 10-Pack",
+      "category": "Spray Paint & Art",
+      "price": 5.99,
+      "description": "Wide-spray fat caps, 10-pack. Fits Ironlak and Montana cans.",
+      "image": "public/images/products/50-fat-caps-10-pack.svg"
+    },
+    {
+      "id": 51,
+      "name": "Skinny Caps 10-Pack",
+      "category": "Spray Paint & Art",
+      "price": 5.99,
+      "description": "Fine-line skinny caps, 10-pack. For detail and outlines.",
+      "image": "public/images/products/51-skinny-caps-10-pack.svg"
+    },
+    {
+      "id": 52,
+      "name": "Cap Variety Pack",
+      "category": "Spray Paint & Art",
+      "price": 7.49,
+      "description": "Assorted cap sampler — fat, skinny, and soft caps in one pack.",
+      "image": "public/images/products/52-cap-variety-pack.svg"
+    },
+    {
+      "id": 53,
+      "name": "Molotow Paint Marker",
+      "category": "Spray Paint & Art",
+      "price": 7.99,
+      "description": "Molotow refillable paint marker, 15mm tip. Permanent, high-coverage.",
+      "image": "public/images/products/53-molotow-paint-marker.svg"
+    },
+    {
+      "id": 54,
+      "name": "Krink K-60 Marker",
+      "category": "Spray Paint & Art",
+      "price": 6.99,
+      "description": "Krink K-60 alcohol-based paint marker. Bold, glossy lines.",
+      "image": "public/images/products/54-krink-k-60-marker.svg"
+    },
+    {
+      "id": 55,
+      "name": "Refill Ink 200ml",
+      "category": "Spray Paint & Art",
+      "price": 9.99,
+      "description": "Refill ink for paint markers, 200ml bottle. Assorted colors.",
+      "image": "public/images/products/55-refill-ink-200ml.svg"
+    }
+  ]
+}
