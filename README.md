@@ -36,7 +36,6 @@ python3 -m http.server 8000   # then open http://127.0.0.1:8000/
 
 ## Notes
 
-- The catalog (`index.html`) currently calls `Auth.requireAuth()` — first visit
-  redirects to `login.html`, which offers **guest browsing**. Drop that gate if
-  the shop should be fully open to the public.
+- The shop is fully open to the public — no login required to browse or add to
+  cart. `login.html` and the demo auth layer remain available but optional.
 - "Home"/Services/About/Find Us links point back to the marketing homepage.
