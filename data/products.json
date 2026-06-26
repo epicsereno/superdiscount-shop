@@ -38,7 +38,8 @@
       "category": "Beverages",
       "price": 0.99,
       "description": "Arizona Green Tea with Honey, 23oz.",
-      "image": "public/images/products/5-arizona-iced-tea-23oz.svg"
+      "image": "public/images/products/5-arizona-iced-tea-23oz.svg",
+      "featured": true
     },
     {
       "id": 6,
@@ -46,7 +47,8 @@
       "category": "Beverages",
       "price": 1.49,
       "description": "Mexican soda, assorted flavors.",
-      "image": "public/images/products/6-jarritos-12oz.svg"
+      "image": "public/images/products/6-jarritos-12oz.svg",
+      "featured": true
     },
     {
       "id": 7,
@@ -70,7 +72,8 @@
       "category": "Snacks & Candy",
       "price": 2.49,
       "description": "Spicy rolled tortilla chips.",
-      "image": "public/images/products/9-takis-fuego-4oz.svg"
+      "image": "public/images/products/9-takis-fuego-4oz.svg",
+      "featured": true
     },
     {
       "id": 10,
@@ -134,7 +137,8 @@
       "category": "School Supplies",
       "price": 1.49,
       "description": "College-ruled, 70 pages, single subject.",
-      "image": "public/images/products/17-spiral-notebook-70-pg.svg"
+      "image": "public/images/products/17-spiral-notebook-70-pg.svg",
+      "featured": true
     },
     {
       "id": 18,
@@ -214,7 +218,8 @@
       "category": "Party Supplies",
       "price": 5.99,
       "description": "16oz red plastic cups, 50-pack.",
-      "image": "public/images/products/27-solo-cups-50ct.svg"
+      "image": "public/images/products/27-solo-cups-50ct.svg",
+      "featured": true
     },
     {
       "id": 28,
@@ -375,7 +380,8 @@
       "category": "Spray Paint & Art",
       "price": 8.99,
       "description": "Montana BLACK high-pressure spray paint, 400ml. Fast-drying, opaque.",
-      "image": "public/images/products/47-montana-black-400ml.svg"
+      "image": "public/images/products/47-montana-black-400ml.svg",
+      "featured": true
     },
     {
       "id": 48,
