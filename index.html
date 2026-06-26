@@ -36,6 +36,14 @@
                 <li><a href="https://epicsereno.github.io/superdiscount/#visit">Find Us</a></li>
                 <li><a href="index.html" aria-current="page">Shop</a></li>
                 <li>
+                    <button class="wishlist-nav-btn" id="wishlist-nav-btn" aria-label="Show saved items" aria-pressed="false">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        <span class="cart-count" id="wishlist-count" hidden>0</span>
+                    </button>
+                </li>
+                <li>
                     <a href="cart.html" class="cart-link" aria-label="View cart">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
@@ -61,11 +69,20 @@
             </div>
         </section>
 
+        <section class="featured-section" id="featured-section" hidden></section>
+
         <section class="shop-filters-section" aria-label="Filter products">
             <div class="container">
                 <div class="filter-bar">
                     <div class="filter-pills" id="filter-pills" role="group" aria-label="Filter by category"></div>
-                    <div>
+                    <div class="filter-controls">
+                        <label class="sr-only" for="sort-select">Sort products</label>
+                        <select class="sort-select" id="sort-select">
+                            <option value="default">Sort: Default</option>
+                            <option value="price-asc">Price: Low → High</option>
+                            <option value="price-desc">Price: High → Low</option>
+                            <option value="name-az">Name: A → Z</option>
+                        </select>
                         <label class="sr-only" for="product-search">Search products</label>
                         <input class="search-input" type="search" id="product-search" placeholder="Search products...">
                     </div>
@@ -75,24 +92,36 @@
 
         <section class="shop-grid-section">
             <div class="container">
+                <p class="result-count" id="result-count" hidden></p>
                 <div class="product-grid" id="product-grid" aria-live="polite" aria-label="Product catalog"></div>
-                <p class="no-results" id="no-results" hidden>No products match your search.</p>
+                <p class="no-results" id="no-results" hidden></p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-layout">
-            <p><strong>Super Discount</strong><br>3118 N Eastern Ave, Los Angeles, CA 90032</p>
-            <p><strong>Hours</strong><br>9:30 AM–9 PM daily</p>
-            <p><a href="tel:+13232238115">(323) 223-8115</a></p>
-            <p>&copy; 2026 Super Discount El Sereno.</p>
+            <div>
+                <p class="footer-brand">Super Discount</p>
+                <p>3118 N Eastern Ave<br>Los Angeles, CA 90032</p>
+            </div>
+            <div>
+                <p class="footer-label">Hours</p>
+                <p>Mon–Sun<br>9:30 AM – 9:00 PM</p>
+            </div>
+            <div>
+                <p class="footer-label">Call to Order</p>
+                <p><a href="tel:+13232238115">(323) 223-8115</a></p>
+                <p class="footer-note">Add items to cart, then call or stop by for pickup.</p>
+            </div>
+            <p class="footer-copy">&copy; 2026 Super Discount El Sereno.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
     <script src="js/shop.js"></script>
 </body>
 </html>
