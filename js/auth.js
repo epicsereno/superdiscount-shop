@@ -3,9 +3,10 @@ const USERS_KEY = 'sd_users';
 
 // Store staff — fixed accounts. Customer accounts are created via register()
 // and stored (hashed) in localStorage under USERS_KEY.
+// Passwords are stored as SHA-256 hashes (same algorithm used for customers).
 const STORE_USERS = [
-    { email: 'owner@superdiscount.com', password: 'discount2026', name: 'Store Owner' },
-    { email: 'admin@superdiscount.com', password: 'superdiscount', name: 'Store Admin' }
+    { email: 'owner@superdiscount.com', hash: 'b7540d00d8fe9a100cd1db7ba9dd1ee96d4b00bfcf5492f7fa27b2edac1058b1', name: 'Store Owner' },
+    { email: 'admin@superdiscount.com', hash: 'ed9ddd682e60887ec196a79e28ce47a4656110217b047984580dc61d700dbeb8', name: 'Store Admin' }
 ];
 
 const Auth = (() => {
@@ -91,15 +92,15 @@ const Auth = (() => {
     async function login(email, password) {
         const cleanEmail = normalizeEmail(email || '');
 
+        const hash = await hashPassword(password);
         const staff = STORE_USERS.find(
-            u => normalizeEmail(u.email) === cleanEmail && u.password === password
+            u => normalizeEmail(u.email) === cleanEmail && u.hash === hash
         );
         if (staff) {
             startSession({ email: staff.email, name: staff.name, role: 'staff' });
             return true;
         }
 
-        const hash = await hashPassword(password);
         const customer = getCustomers().find(u => u.email === cleanEmail && u.hash === hash);
         if (customer) {
             startSession({ email: customer.email, name: customer.name, role: 'customer' });
