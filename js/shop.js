@@ -6,6 +6,7 @@ let sortOrder = 'default';
 let showWishlistOnly = false;
 
 async function initShop() {
+    readUrlParams();
     try {
         const [productsResp, reviewsResp] = await Promise.all([
             fetch('data/products.json'),
@@ -18,6 +19,10 @@ async function initShop() {
         buildFeatured();
         buildFilters();
         buildModal();
+        const searchInput = document.getElementById('product-search');
+        if (searchInput && searchQuery) searchInput.value = searchQuery;
+        const sortSelect = document.getElementById('sort-select');
+        if (sortSelect && sortOrder !== 'default') sortSelect.value = sortOrder;
         render();
     } catch {
         document.getElementById('product-grid').innerHTML =
@@ -112,7 +117,7 @@ function buildFilters() {
     const categories = ['all', ...new Set(allProducts.map(p => p.category))];
     const container = document.getElementById('filter-pills');
     container.innerHTML = categories.map(cat => `
-        <button class="filter-pill${cat === 'all' ? ' is-active' : ''}" data-category="${cat}">
+        <button class="filter-pill${cat === activeCategory ? ' is-active' : ''}" data-category="${cat}">
             ${cat === 'all' ? 'All Products' : cat}
         </button>
     `).join('');
@@ -208,7 +213,39 @@ function getSorted(arr) {
     return copy;
 }
 
+function readUrlParams() {
+    const params = new URLSearchParams(location.search);
+    searchQuery = params.get('q')?.toLowerCase().trim() || '';
+    activeCategory = params.get('cat') || 'all';
+    sortOrder = params.get('sort') || 'default';
+}
+
+function updateUrl() {
+    const params = new URLSearchParams();
+    if (searchQuery) params.set('q', searchQuery);
+    if (activeCategory !== 'all') params.set('cat', activeCategory);
+    if (sortOrder !== 'default') params.set('sort', sortOrder);
+    const qs = params.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+}
+
+function copyProductLink(id, btn) {
+    const base = location.href.replace(/[^/]*(\?.*)?$/, '');
+    const url = `${base}product.html?id=${id}`;
+    navigator.clipboard.writeText(url).then(() => {
+        btn.classList.add('is-copied');
+        btn.setAttribute('aria-label', 'Link copied!');
+        setTimeout(() => {
+            btn.classList.remove('is-copied');
+            btn.setAttribute('aria-label', 'Copy product link');
+        }, 1400);
+    }).catch(() => {
+        prompt('Copy this link to share:', url);
+    });
+}
+
 function render() {
+    updateUrl();
     const grid = document.getElementById('product-grid');
     const noResults = document.getElementById('no-results');
     const countEl = document.getElementById('result-count');
@@ -275,6 +312,10 @@ function render() {
             if (showWishlistOnly && !added) render();
         });
     });
+
+    grid.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', () => copyProductLink(parseInt(btn.dataset.id, 10), btn));
+    });
 }
 
 function productCard(p) {
@@ -305,6 +346,12 @@ function productCard(p) {
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
                 </button>
+                <button class="share-btn" data-id="${p.id}" aria-label="Copy product link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                    </svg>
+                </button>
                 <button class="quick-view-btn" data-id="${p.id}" aria-label="Quick view ${p.name}">Quick View</button>
             </div>
             <div class="product-body">
@@ -323,6 +370,13 @@ function productCard(p) {
 
 document.addEventListener('DOMContentLoaded', () => {
     initShop();
+
+    document.addEventListener('keydown', e => {
+        if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA' && document.activeElement.tagName !== 'SELECT') {
+            e.preventDefault();
+            document.getElementById('product-search')?.focus();
+        }
+    });
 
     document.getElementById('product-search')?.addEventListener('input', e => {
         searchQuery = e.target.value.toLowerCase().trim();

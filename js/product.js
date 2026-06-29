@@ -60,6 +60,18 @@ function renderProduct(reviews) {
     const avg = list.length ? list.reduce((s, r) => s + r.rating, 0) / list.length : 0;
 
     document.title = `${product.name} | Super Discount El Sereno`;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = `${product.description} — In stock at Super Discount El Sereno, 3118 N Eastern Ave, Los Angeles. Open daily 9:30 AM–9 PM.`;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = `${product.name} | Super Discount El Sereno`;
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.content = `${product.description} — In stock at Super Discount El Sereno, 3118 N Eastern Ave, Los Angeles.`;
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = `https://epicsereno.github.io/superdiscount-shop/product.html?id=${product.id}`;
+
     document.getElementById('crumb-name').textContent = product.name;
     const crumbCat = document.getElementById('crumb-category');
     crumbCat.textContent = product.category;
@@ -101,7 +113,7 @@ function renderProduct(reviews) {
         </div>
     `;
 
-    crumbCat.href = `index.html`;
+    crumbCat.href = `index.html?cat=${encodeURIComponent(product.category)}`;
 
     const qtyInput = document.getElementById('qty-input');
     const clampQty = () => {
@@ -219,7 +231,7 @@ function relatedCard(p) {
                 <h3 class="product-name"><a class="product-name-link" href="${href}">${escapeHtml(p.name)}</a></h3>
                 <div class="product-footer">
                     <span class="product-price">$${p.price.toFixed(2)}</span>
-                    <a class="btn btn-primary" href="${href}">View</a>
+                    <button class="btn btn-primary related-add-to-cart" data-id="${p.id}">Add to Cart</button>
                 </div>
             </div>
         </article>
@@ -231,8 +243,21 @@ function renderRelated() {
         .filter(p => p.category === product.category && p.id !== product.id)
         .slice(0, 4);
     if (!related.length) return;
-    document.getElementById('related-grid').innerHTML = related.map(relatedCard).join('');
+    const grid = document.getElementById('related-grid');
+    grid.innerHTML = related.map(relatedCard).join('');
     document.getElementById('related-section').hidden = false;
+
+    grid.querySelectorAll('.related-add-to-cart').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const id = parseInt(btn.dataset.id, 10);
+            const p = allProducts.find(x => x.id === id);
+            if (!p) return;
+            Cart.add(p);
+            btn.textContent = 'Added!';
+            btn.classList.add('is-added');
+            setTimeout(() => { btn.textContent = 'Add to Cart'; btn.classList.remove('is-added'); }, 1400);
+        });
+    });
 }
 
 /* ── Init ───────────────────────────────────────────────────────────── */

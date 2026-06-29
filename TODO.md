@@ -9,18 +9,18 @@ Concrete improvements for the static shop at https://epicsereno.github.io/superd
 - [ ] Add a "Clear cart" button to `cart.html`
 - [ ] Show an empty-cart illustration/message with a CTA back to the shop
 - [ ] Display estimated total including a "call to confirm" note on the cart page
-- [ ] Add a `?id=` deep-link share button on each product card so customers can text a product link
+- [x] Add a `?id=` deep-link share button on each product card so customers can text a product link
 
 ## Product Catalog
 
 - [ ] Add `stock` field to `data/products.json` and show "Low stock" / "Out of stock" badges
 - [ ] Support product images via URL in `data/products.json` (in addition to local SVGs)
-- [ ] Persist active category + search query in the URL (`?q=&cat=`) so filters survive page refresh and can be shared
+- [x] Persist active category + search query in the URL (`?q=&cat=`) so filters survive page refresh and can be shared
 - [ ] Add "Back to top" button for long category lists
 
 ## Product Detail Page
 
-- [ ] Add "Add to Cart" button on related product cards (currently just "View")
+- [x] Add "Add to Cart" button on related product cards (currently just "View")
 - [ ] Implement image zoom / lightbox on click for products with photos
 - [ ] Show review count in page `<title>` for SEO (e.g. `Coca-Cola 2L (12 reviews) | Super Discount`)
 
@@ -32,7 +32,7 @@ Concrete improvements for the static shop at https://epicsereno.github.io/superd
 
 ## Search & Filtering
 
-- [ ] Add keyboard shortcut (`/`) to focus the search input
+- [x] Add keyboard shortcut (`/`) to focus the search input
 - [ ] Announce filter result counts to screen readers via an `aria-live` region
 - [ ] Support comma-separated tags in `data/products.json` and add tag filtering
 
@@ -51,8 +51,8 @@ Concrete improvements for the static shop at https://epicsereno.github.io/superd
 
 ## SEO / Meta
 
-- [ ] Add per-product Open Graph tags in `product.html` (populated dynamically from JSON)
-- [ ] Add `<link rel="canonical">` on `product.html?id=N` pages
+- [x] Add per-product Open Graph tags in `product.html` (populated dynamically from JSON)
+- [x] Add `<link rel="canonical">` on `product.html?id=N` pages
 - [ ] Submit `sitemap.xml` to Google Search Console (listing all `product.html?id=N` URLs)
 
 ## Performance
