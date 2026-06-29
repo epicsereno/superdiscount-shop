@@ -1921,6 +1921,34 @@ address {
 .wishlist-btn svg { fill: none; }
 .wishlist-btn.is-active svg { fill: currentColor; }
 
+.share-btn {
+    position: absolute;
+    top: 2.25rem;
+    right: 0.5rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(26, 26, 26, 0.62);
+    color: var(--color-background);
+    border: 2px solid rgba(249, 246, 240, 0.35);
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.share-btn:hover {
+    background: rgba(26, 26, 26, 0.88);
+    border-color: rgba(249, 246, 240, 0.7);
+}
+
+.share-btn.is-copied {
+    background: #1e7e34;
+    border-color: #1e7e34;
+}
+
 .quick-view-btn {
     position: absolute;
     bottom: 0.5rem;
